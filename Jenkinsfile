@@ -8,7 +8,9 @@ pipeline {
         }
         stage('Stage 2') {
             steps {
-                sh "echo 2"
+                script {
+                    pullRequest.comment('This PR is highly illogical..')
+                }
             }
         }
     }
